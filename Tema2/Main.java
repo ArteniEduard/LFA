@@ -198,7 +198,6 @@ class PDA {
         // toate tranzitiile posibile
         for (PDATransition transition : currentState.transitions) {
 
-            // verificare input
             boolean inputMatches = false;
 
             if (transition.inputSymbol.equals("lambda")) {
@@ -232,9 +231,6 @@ class PDA {
             // daca nu e lambda
             if (!transition.pushString.equals("lambda")) {
 
-                // push in ordine inversa
-                // deoarece primul caracter trebuie
-                // sa ajunga in varf
                 for (int i = transition.pushString.length() - 1; i >= 0; i--) {
 
                     newStack.push(String.valueOf(transition.pushString.charAt(i)));
