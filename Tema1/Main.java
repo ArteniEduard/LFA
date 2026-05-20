@@ -1,5 +1,6 @@
+package Tema1;
+
 import java.io.File;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -168,7 +169,7 @@ class Automaton {
 
 public class Main {
     public static void main(String[] args) {
-        File input = new File("input.txt");
+        File input = new File("Tema1/input.txt");
         try (Scanner scanner = new Scanner(input)) {
 
             boolean isLambdaNFA = Boolean.parseBoolean(scanner.nextLine());
